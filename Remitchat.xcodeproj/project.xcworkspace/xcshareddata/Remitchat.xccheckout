@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D7CF582F-5529-4E7B-B908-F505C2D7CB41</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Remitchat</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</key>
+		<string>https://10.0.0.146/svn/Stone.HuiXin.Ios/trunk/HuiXin</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Remitchat.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</key>
+		<string>https://10.0.0.146/svn/Stone.HuiXin.Ios</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://10.0.0.146/svn/Stone.HuiXin.Ios/trunk/HuiXin/Remitchat.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HuiXin</string>
+		</dict>
+	</array>
+</dict>
+</plist>
