@@ -83,7 +83,7 @@ typedef void (^FailureBlock)(id failure);
  *
  *  @since 1.0
  */
-typedef void (^RequestBlock)(id responseData);
+typedef void (^RequestBlock)(id responseData,bool isError);
 
 /**
  *  @author CC, 15-08-19

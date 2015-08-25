@@ -37,7 +37,7 @@
  *
  *  @since <#1.0#>
  */
-- (void) responseWithBlock: (RequestBlock) returnBlock
+- (void) responseWithBlock: (Completion) returnBlock
             WithErrorBlock: (ErrorCodeBlock) errorBlock
           WithFailureBlock: (FailureBlock)failureBlock
 {

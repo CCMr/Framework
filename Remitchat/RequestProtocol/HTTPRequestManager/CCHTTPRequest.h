@@ -125,7 +125,7 @@
  *
  *  @since 1.0
  */
-- (void)errorCodeWithDic:(NSDictionary *)errorDic
+- (void)errorCodeWithDic:(id)errorDic
                  BlokKey:(NSString *)key;
 
 /**
@@ -156,7 +156,7 @@
  *
  *  @since <#version number#>
  */
--(void)Login:(NSDictionary *)PostData
+- (void)Login:(NSDictionary *)PostData
 responseBlock:(RequestBlock)responseBlock;
 
 @end

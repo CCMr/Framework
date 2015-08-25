@@ -11,7 +11,7 @@
 
 @interface BaseViewModel : NSObject
 
-@property (nonatomic, strong) RequestBlock returnBlock;
+@property (nonatomic, strong) Completion returnBlock;
 @property (nonatomic, strong) ErrorCodeBlock errorBlock;
 @property (nonatomic, strong) FailureBlock failureBlock;
 
@@ -39,7 +39,7 @@
  *
  *  @since <#1.0#>
  */
-- (void) responseWithBlock: (RequestBlock) returnBlock
+- (void) responseWithBlock: (Completion) returnBlock
             WithErrorBlock: (ErrorCodeBlock) errorBlock
           WithFailureBlock: (FailureBlock)failureBlock;
 

@@ -61,7 +61,7 @@ static CCHTTPRequest *_sharedlnstance = nil;
  */
 + (BOOL) netWorkReachabilityWithURLString:(NSString *) strUrl
 {
-   return [CCHTTPManager netWorkReachabilityWithURLString:strUrl];
+    return [CCHTTPManager netWorkReachabilityWithURLString:strUrl];
 }
 
 /**
@@ -78,7 +78,7 @@ static CCHTTPRequest *_sharedlnstance = nil;
 - (NSMutableDictionary *)fixedParameters:(NSDictionary *)postData
 {
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:postData];
-   
+
     return dic;
 }
 
@@ -136,11 +136,12 @@ static CCHTTPRequest *_sharedlnstance = nil;
  *
  *  @since 1.0
  */
-- (void)responseProcessEvent:(id)responseData  BlokKey:(NSString *)key
+- (void)responseProcessEvent:(id)responseData
+                     BlokKey:(NSString *)key
 {
-    void (^responseProcessBlock)(NSObject *requestOBJ) = [self requestOBJBlock:key];
+    void (^responseProcessBlock)(id responseData,bool isError) = [self requestOBJBlock:key];
     if (responseProcessBlock) {
-        responseProcessBlock(responseData);
+        responseProcessBlock(responseData,NO);
     }
 }
 
@@ -153,11 +154,12 @@ static CCHTTPRequest *_sharedlnstance = nil;
  *
  *  @since 1.0
  */
-- (void)errorCodeWithDic:(NSDictionary *)errorDic  BlokKey:(NSString *)key
+- (void)errorCodeWithDic:(id)errorDic
+                 BlokKey:(NSString *)key
 {
-    void (^errorCodeBlock)(NSObject *requestOBJ) = [self requestOBJBlock:key];
+    void (^errorCodeBlock)(id responseData,bool isError) = [self requestOBJBlock:key];
     if (errorCodeBlock) {
-        
+
     }
 }
 
@@ -170,16 +172,17 @@ static CCHTTPRequest *_sharedlnstance = nil;
  *
  *  @since 1.0
  */
-- (void)netFailure:(NSError *)error  BlokKey:(NSString *)key
+- (void)netFailure:(NSError *)error
+           BlokKey:(NSString *)key
 {
-    void (^netFailureBlock)(NSObject *requestOBJ) = [self requestOBJBlock:key];
+    void (^netFailureBlock)(id responseData,bool isError) = [self requestOBJBlock:key];
     if (netFailureBlock) {
         if (error.code == kCFURLErrorNotConnectedToInternet) {
-            netFailureBlock(@"当前网络状况不佳，请检查网络设置");
+            netFailureBlock(@"当前网络状况不佳，请检查网络设置",YES);
         }else if (error.code == kCFURLErrorTimedOut) {
-            netFailureBlock(@"请求超时，请检查网络设置");
+            netFailureBlock(@"请求超时，请检查网络设置",YES);
         }else{
-            netFailureBlock(@"请求服务器失败");
+            netFailureBlock(@"请求服务器失败",YES);
         }
     }
 }
