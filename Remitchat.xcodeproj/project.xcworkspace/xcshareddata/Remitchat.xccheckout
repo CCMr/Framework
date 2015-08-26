@@ -12,12 +12,16 @@
 	<dict>
 		<key>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</key>
 		<string>https://10.0.0.146/svn/Stone.HuiXin.Ios/trunk/HuiXin</string>
+		<key>F5242A536F489794E4A1DD0B570BF8D326B1C1FB</key>
+		<string>https://github.com/CCMr/Framework.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Remitchat.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</key>
+		<string>../../../HuiXin</string>
+		<key>F5242A536F489794E4A1DD0B570BF8D326B1C1FB</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
@@ -26,13 +30,21 @@
 		<string>https://10.0.0.146/svn/Stone.HuiXin.Ios</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://10.0.0.146/svn/Stone.HuiXin.Ios/trunk/HuiXin/Remitchat.xcodeproj</string>
+	<string>https://github.com/CCMr/Framework.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>88f35664-9ad0-c143-b45c-9dc6a31fd6a6++9172</string>
+	<string>F5242A536F489794E4A1DD0B570BF8D326B1C1FB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5242A536F489794E4A1DD0B570BF8D326B1C1FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Framework</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>

@@ -28,6 +28,7 @@
 #import "APService.h"
 #import "CCSecurityStrategy.h"
 #import "SmoothViewController.h"
+#import "CCUserDefaultsCrash.h"
 
 @implementation BaseAppDelegate
 
@@ -173,9 +174,9 @@
  *  @since 1.0
  */
 - (void)uploadCrashLog{
-    BOOL isCrash = [CCUserDefaults sharedlnstance].isCrash;
+    BOOL isCrash = [CCUserDefaultsCrash sharedlnstance].isCrash;
     if (isCrash) {// 调用接口反馈错误日志
-        [CCUserDefaults sharedlnstance].isCrash = !isCrash;
+        [CCUserDefaultsCrash sharedlnstance].isCrash = !isCrash;
     }
 }
 

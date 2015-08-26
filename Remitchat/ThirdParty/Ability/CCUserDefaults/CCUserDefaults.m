@@ -127,9 +127,18 @@ static void objectSetter(CCUserDefaults *self, SEL _cmd, id object) {
 #pragma mark - Begin
 
 + (instancetype)sharedlnstance {
-    static dispatch_once_t pred;
-    static CCUserDefaults *sharedInstance = nil;
-    dispatch_once(&pred, ^{ sharedInstance = [[self alloc] init]; });
+    NSString *key = [NSString stringWithUTF8String:object_getClassName(self)];
+    static NSMutableDictionary *sharedInstanceDic = nil;
+    if (!sharedInstanceDic)
+        sharedInstanceDic = [NSMutableDictionary dictionary];
+    
+    CCUserDefaults *sharedInstance = [sharedInstanceDic objectForKey:key];
+    
+    if (!sharedInstance) {
+        sharedInstance =  [[self alloc] init];
+        [sharedInstanceDic setObject:sharedInstanceDic forKey:key];
+    }
+    
     return sharedInstance;
 }
 

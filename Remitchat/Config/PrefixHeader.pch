@@ -69,7 +69,6 @@
 #import <Foundation/Foundation.h>
 #import "EnumConfig.h"
 #import "Config.h"
-#import "CCUserDefaults.h"
 
 #import "BaseViewController.h"
 #import "UIImageView+MJWebCache.h"

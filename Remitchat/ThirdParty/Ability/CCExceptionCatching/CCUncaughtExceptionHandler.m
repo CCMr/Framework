@@ -26,6 +26,7 @@
 #import "CCUncaughtExceptionHandler.h"
 #include <libkern/OSAtomic.h>
 #include <execinfo.h>
+#import "CCUserDefaultsCrash.h"
 
 NSString * const UncaughtExceptionHandlerSignalExceptionName = @"UncaughtExceptionHandlerSignalExceptionName";
 NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerSignalKey";
@@ -82,8 +83,8 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
     [errorStr appendFormat:@"%@ \n",[[exception userInfo] objectForKey:UncaughtExceptionHandlerAddressesKey]];
     
     //存储本地，下次启动发送到服务器
-    [CCUserDefaults sharedlnstance].isCrash = YES;
-    [CCUserDefaults sharedlnstance].crashContent = errorStr;
+    [CCUserDefaultsCrash sharedlnstance].isCrash = YES;
+    [CCUserDefaultsCrash sharedlnstance].crashContent = errorStr;
     
     CFRunLoopRef runLoop = CFRunLoopGetCurrent();
     CFArrayRef allModes = CFRunLoopCopyAllModes(runLoop);

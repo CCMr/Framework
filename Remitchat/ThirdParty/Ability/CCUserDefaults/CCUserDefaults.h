@@ -23,27 +23,3 @@
 +(instancetype)sharedlnstance;
 
 @end
-
-#pragma mark - 奔溃日志
-
-@interface CCUserDefaults (Crash)
-
-/**
- *  @author CC, 2015-07-30
- *
- *  @brief  是否存在奔溃日志
- *
- *  @since 1.0
- */
-@property (nonatomic, assign) BOOL isCrash;
-
-/**
- *  @author CC, 2015-07-30
- *
- *  @brief  奔溃日志内容
- *
- *  @since 1.0
- */
-@property (nonatomic, weak) NSString *crashContent;
-
-@end

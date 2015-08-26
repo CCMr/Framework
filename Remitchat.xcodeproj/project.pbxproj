@@ -245,7 +245,7 @@
 		BE74884C1B7D8614009E905C /* CCNSManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7487191B7D8614009E905C /* CCNSManagedObject.m */; };
 		BE74884D1B7D8614009E905C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE74871B1B7D8614009E905C /* CoreDataManager.m */; };
 		BE74884F1B7D8614009E905C /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7487231B7D8614009E905C /* BaseEntity.m */; };
-		BE7488501B7D8614009E905C /* CCUserDefaults+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7487251B7D8614009E905C /* CCUserDefaults+Crash.m */; };
+		BE7488501B7D8614009E905C /* CCUserDefaultsCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7487251B7D8614009E905C /* CCUserDefaultsCrash.m */; };
 		BE7488511B7D8614009E905C /* CCHTTPRequest+PersonalCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7487271B7D8614009E905C /* CCHTTPRequest+PersonalCenter.m */; };
 		BE7488521B7D8614009E905C /* CCHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE74872A1B7D8614009E905C /* CCHTTPManager.m */; };
 		BE7488531B7D8614009E905C /* CCHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BE74872C1B7D8614009E905C /* CCHTTPRequest.m */; };
@@ -442,6 +442,7 @@
 		424A12921B8AA92200D3E546 /* MessageRootEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageRootEntity.h; path = Entity/MessageRootEntity.h; sourceTree = "<group>"; };
 		424A12931B8AA92200D3E546 /* MessageRootEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageRootEntity.m; path = Entity/MessageRootEntity.m; sourceTree = "<group>"; };
 		428FA1721B7F0DCA00188CEB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		42B9F1171B8DC8FB00D9E218 /* CCUserDefaultsCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUserDefaultsCrash.h; sourceTree = "<group>"; };
 		42CE1D0B1B86BFB100403A67 /* libPushSDK-1.8.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPushSDK-1.8.2.a"; path = "Vender.a/libPushSDK-1.8.2.a"; sourceTree = "<group>"; };
 		42CE1D0E1B86C47A00403A67 /* SmoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmoothViewController.h; path = Smooth/SmoothViewController.h; sourceTree = "<group>"; };
 		42CE1D0F1B86C47A00403A67 /* SmoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmoothViewController.m; path = Smooth/SmoothViewController.m; sourceTree = "<group>"; };
@@ -828,7 +829,7 @@
 		BE74871B1B7D8614009E905C /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		BE7487221B7D8614009E905C /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
 		BE7487231B7D8614009E905C /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
-		BE7487251B7D8614009E905C /* CCUserDefaults+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCUserDefaults+Crash.m"; sourceTree = "<group>"; };
+		BE7487251B7D8614009E905C /* CCUserDefaultsCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUserDefaultsCrash.m; sourceTree = "<group>"; };
 		BE7487271B7D8614009E905C /* CCHTTPRequest+PersonalCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCHTTPRequest+PersonalCenter.m"; sourceTree = "<group>"; };
 		BE7487291B7D8614009E905C /* CCHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHTTPManager.h; sourceTree = "<group>"; };
 		BE74872A1B7D8614009E905C /* CCHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHTTPManager.m; sourceTree = "<group>"; };
@@ -2420,7 +2421,8 @@
 		BE7487241B7D8614009E905C /* UserDefaultsEntity */ = {
 			isa = PBXGroup;
 			children = (
-				BE7487251B7D8614009E905C /* CCUserDefaults+Crash.m */,
+				42B9F1171B8DC8FB00D9E218 /* CCUserDefaultsCrash.h */,
+				BE7487251B7D8614009E905C /* CCUserDefaultsCrash.m */,
 			);
 			path = UserDefaultsEntity;
 			sourceTree = "<group>";
@@ -3221,7 +3223,7 @@
 				BEFCEEE01B8308FA00CD99F6 /* CCVoiceCommonHelper.m in Sources */,
 				42D6C9681B85D5A60091135C /* CCThemeManager.m in Sources */,
 				BEFCEEB21B82D45900CD99F6 /* CCVoiceRecordHelper.m in Sources */,
-				BE7488501B7D8614009E905C /* CCUserDefaults+Crash.m in Sources */,
+				BE7488501B7D8614009E905C /* CCUserDefaultsCrash.m in Sources */,
 				BEFCEEC91B82E3CC00CD99F6 /* CCFoundationCommon.m in Sources */,
 				BEFCEEC01B82DE9000CD99F6 /* CCMessageVideoConverPhotoFactory.m in Sources */,
 				BEFCEE771B82C1E500CD99F6 /* CCCaptureHelper.m in Sources */,

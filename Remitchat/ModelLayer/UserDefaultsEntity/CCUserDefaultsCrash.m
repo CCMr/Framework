@@ -23,9 +23,9 @@
 // THE SOFTWARE.
 //
 
-#import "CCUserDefaults.h"
+#import "CCUserDefaultsCrash.h"
 
-@implementation CCUserDefaults (Crash)
+@implementation CCUserDefaultsCrash
 
 @dynamic isCrash;
 @dynamic crashContent;
