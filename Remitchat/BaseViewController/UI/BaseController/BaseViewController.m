@@ -312,7 +312,7 @@
     _HUD.detailsLabelText = detailsLabelText;
     _HUD.detailsLabelColor = [UIColor whiteColor];
     [_HUD show:YES];
-    [_HUD hide:YES afterDelay:1];
+    [_HUD hide:YES afterDelay:1.5];
 }
 
 /**

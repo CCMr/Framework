@@ -92,7 +92,7 @@
 
 - (void)applicationWillEnterForegroundNotification:(NSNotification *)nc
 {
-    if (_isAnimating) {
+    if (!_isAnimating) {
         [self startAnimation];
     }
     else {

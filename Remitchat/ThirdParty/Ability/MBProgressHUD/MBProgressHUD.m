@@ -264,7 +264,9 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
     self.mode = MBProgressHUDAnimationFade;
     self.labelText = nil;
     self.detailsLabelText = nil;
-    
+    self.yOffset = 0;
+    self.xOffset = 0;
+
 	useAnimation = animated;
 	// If the minShow time is set, calculate how long the hud was shown,
 	// and pospone the hiding operation if necessary

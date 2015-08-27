@@ -57,7 +57,17 @@
                                                 destructiveButtonTitle:nil
                                                      otherButtonTitles:@"拍照获取",@"从相册选择",nil];
 
-    [myActionSheet showInView:[UIApplication sharedApplication].keyWindow];
+    [myActionSheet showInView:[UIApplication sharedApplication].keyWindow withCompletionHandler:^(NSInteger buttonIndex) {
+        switch (buttonIndex)
+        {
+            case 0:  //打开照相机拍照
+                [self cameras];
+                break;
+            case 1:  //打开本地相册
+                [self LocalPhoto];
+                break;
+        }
+    }];
     _callBackBlock = complate;
 }
 
@@ -95,21 +105,6 @@
     _currentViewController = viewController;
     [self LocalPhoto];
     _callBackBlock = complate;
-}
-
-
-#pragma mark - ActionSheet Delegate
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    switch (buttonIndex)
-    {
-        case 0:  //打开照相机拍照
-            [self cameras];
-            break;
-        case 1:  //打开本地相册
-            [self LocalPhoto];
-            break;
-    }
 }
 
 /**
