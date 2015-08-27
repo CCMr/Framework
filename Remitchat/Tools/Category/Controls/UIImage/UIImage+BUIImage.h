@@ -27,6 +27,34 @@
 
 @interface UIImage (BUIImage)
 
+/**
+ *  @author CC, 2015-07-22 16:07:57
+ *
+ *  @brief  算压缩比例
+ *
+ *  @param targetSize 压缩比例
+ *
+ *  @return <#return value description#>
+ *
+ *  @since 1.0
+ */
+- (UIImage *)compression: (CGSize)targetSize;
+
+/**
+ *  @author CC, 2015-07-22 16:07:55
+ *
+ *  @brief  压缩返回数据图片
+ *
+ *  @param size    压缩图片大小
+ *  @param percent 压缩比例
+ *
+ *  @return <#return value description#>
+ *
+ *  @since 1.0
+ */
+- (UIImage *)compressionData: (CGSize)size
+                     Percent: (float)percent;
+
 #pragma mark - 毛玻璃效果
 /**
  *  @author CC, 2015-07-31

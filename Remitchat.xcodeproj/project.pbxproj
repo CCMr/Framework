@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		420623551B85599200A94918 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 420623541B85599200A94918 /* BaseViewModel.m */; };
 		420623581B8561BB00A94918 /* ChatMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 420623571B8561BB00A94918 /* ChatMessageViewModel.m */; };
+		423D77701B8EE3CA00ECB35E /* UIImage+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 423D776F1B8EE3CA00ECB35E /* UIImage+Data.m */; };
 		42463C161B7F1B9A008DB5F4 /* SignalRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42463C151B7F1B9A008DB5F4 /* SignalRManager.m */; };
 		4246C57E1B84132700BC8B4D /* ScanBook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4246C5721B84132700BC8B4D /* ScanBook@2x.png */; };
 		4246C57F1B84132700BC8B4D /* ScanBook_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4246C5731B84132700BC8B4D /* ScanBook_HL@2x.png */; };
@@ -406,6 +407,8 @@
 		420623541B85599200A94918 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewModel.m; path = BaseViewModel/BaseViewModel.m; sourceTree = "<group>"; };
 		420623561B8561BB00A94918 /* ChatMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatMessageViewModel.h; path = ChatMessageController/ChatMessageViewModel.h; sourceTree = "<group>"; };
 		420623571B8561BB00A94918 /* ChatMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatMessageViewModel.m; path = ChatMessageController/ChatMessageViewModel.m; sourceTree = "<group>"; };
+		423D776E1B8EE3CA00ECB35E /* UIImage+Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Data.h"; sourceTree = "<group>"; };
+		423D776F1B8EE3CA00ECB35E /* UIImage+Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Data.m"; sourceTree = "<group>"; };
 		42463C141B7F1B9A008DB5F4 /* SignalRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalRManager.h; sourceTree = "<group>"; };
 		42463C151B7F1B9A008DB5F4 /* SignalRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalRManager.m; sourceTree = "<group>"; };
 		4246C5721B84132700BC8B4D /* ScanBook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanBook@2x.png"; sourceTree = "<group>"; };
@@ -2738,6 +2741,8 @@
 				BEFCEE571B81E4E100CD99F6 /* UIImage+Alpha.m */,
 				BEFCEE591B81E50B00CD99F6 /* UIImage+RoundedCorner.h */,
 				BEFCEE5A1B81E50B00CD99F6 /* UIImage+RoundedCorner.m */,
+				423D776E1B8EE3CA00ECB35E /* UIImage+Data.h */,
+				423D776F1B8EE3CA00ECB35E /* UIImage+Data.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -3085,6 +3090,7 @@
 				42D6C9BA1B85D5A60091135C /* UIImage+WebP.m in Sources */,
 				42D6C9511B85D5A60091135C /* AFHTTPSessionManager.m in Sources */,
 				BEFCEDF01B81CFF500CD99F6 /* CCMessageBubbleFactory.m in Sources */,
+				423D77701B8EE3CA00ECB35E /* UIImage+Data.m in Sources */,
 				42D6C9BC1B85D5A60091135C /* UIImageView+WebCache.m in Sources */,
 				42D6C9921B85D5A60091135C /* CalendarHeaderView.m in Sources */,
 				42D6C9CF1B85D5A60091135C /* CCTableViewCell.m in Sources */,

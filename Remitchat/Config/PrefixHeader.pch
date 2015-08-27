@@ -84,4 +84,6 @@
 #import "NSString+BNSString.h"
 #import "CCNSManagedObject.h"
 #import "CoreDataManager.h"
+#import "UIImage+Data.h"
+
 #endif

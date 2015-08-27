@@ -230,6 +230,21 @@
     return [nf stringFromNumber:[NSNumber numberWithDouble:[self doubleValue]]];
 }
 
+/**
+ *  @author CC, 15-08-27
+ *
+ *  @brief  字符串解码Image
+ *
+ *  @return 返回解码之后Image
+ *
+ *  @since <#1.0#>
+ */
+- (UIImage *)decodedImage
+{
+    NSData *datas = [[NSData alloc] initWithBase64Encoding:self];
+    return [UIImage imageWithData:datas];
+}
+
 #pragma mark - 取值
 /**
  *  @author CC, 15-08-14

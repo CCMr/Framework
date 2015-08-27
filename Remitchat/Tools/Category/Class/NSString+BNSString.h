@@ -74,6 +74,17 @@
  */
 - (NSString *)convertingCurrencyFormat;
 
+/**
+ *  @author CC, 15-08-27
+ *
+ *  @brief  字符串解码Image
+ *
+ *  @return 返回解码之后Image
+ *
+ *  @since <#1.0#>
+ */
+- (UIImage *)decodedImage;
+
 #pragma mark - 取值
 /**
  *  @author CC, 15-08-14
