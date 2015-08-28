@@ -28,18 +28,10 @@
 
 const char oldDelegateKey;
 const char completionHandlerKey;
-const char sheetBackgroundViewKey;
 
 @implementation UIActionSheet (BUIActionSheet)
 
--(void)setSheetBackgroundView:(UIView *)sheetBackgroundView
-{
-    objc_setAssociatedObject(self, &sheetBackgroundViewKey, sheetBackgroundView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
--(NSObject *)sheetBackgroundView{
-    return objc_getAssociatedObject(self, &sheetBackgroundViewKey);
-}
+@dynamic sheetBackgroundView;
 
 /**
  *  @author CC, 2015-07-16

@@ -34,7 +34,7 @@
  *
  *  @since 1.0
  */
-@property (nonatomic, retain) UIView *sheetBackgroundView;
+@property (nonatomic, strong) UIView *sheetBackgroundView;
 
 /**
  *  @author CC, 2015-07-16

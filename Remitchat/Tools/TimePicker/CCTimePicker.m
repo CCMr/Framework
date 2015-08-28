@@ -68,7 +68,7 @@
     Canceled.frame = CGRectMake(15, 220, 135, 40);
     [Canceled setTitle:@"取消" forState:UIControlStateNormal];
     [Canceled handleControlEvent:UIControlEventTouchDown withBlock:^(id sender) {
-        [((CCActionSheet *)views.superview) hide:0];
+        [((UIActionSheet *)views.superview) hide:0];
     }];
     [views addSubview:Canceled];
     
@@ -76,7 +76,7 @@
     definite.frame = CGRectMake(165, 220, 135, 40);
     [definite setTitle:@"确定" forState:UIControlStateNormal];
     [definite handleControlEvent:UIControlEventTouchDown withBlock:^(id sender) {
-        [((CCActionSheet *)views.superview) hide:1];
+        [((UIActionSheet *)views.superview) hide:1];
     }];
     [views addSubview:definite];
     
@@ -125,8 +125,8 @@
             [self presentViewController:alers animated:YES completion:nil];
         }];
     }else{
-        CCActionSheet *Sheet = [[CCActionSheet alloc] initWithContentView:[self SheetDate]];
-        [Sheet showInView:self.view withCompletionHandler:^(NSInteger buttonIndex) {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithContentView:[self SheetDate]];
+        [sheet showInView:self.view withCompletionHandler:^(NSInteger buttonIndex) {
             if (buttonIndex == 1) {
                 if (_selectedDate) {
                     if (![[_selectedDate earlierDate:[NSDate date]] isEqualToDate:_selectedDate]) {
@@ -137,7 +137,7 @@
                 }
             }
         }];
-        [Sheet showInView:self.view];
+        [sheet showInView:self.view];
     }
 }
 
