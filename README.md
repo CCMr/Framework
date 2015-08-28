@@ -8,34 +8,34 @@
     *  Navigation（导航栏）
     *  UI（主体UI）
 * Config（配置文件）
-* PrefixHeader（导入与服务器地址）
-* Config（Block、宏定义）
+    * PrefixHeader（导入与服务器地址）
+    * Config（Block、宏定义）
 * DatabaseLayer（数据库层）
-*  CoreDataManager（封装苹果数据库）
+    *  CoreDataManager（封装苹果数据库）
 * ModelLayer（实体层 ）
-* Entity（自定义实体）
-* BaseViewModel（View层实体基类）
-* BaseEntity（实体基类）
-* UserDefaultsEntity (NSUserDefaults封装实体)
+    * Entity（自定义实体）
+    * BaseViewModel（View层实体基类）
+    * BaseEntity（实体基类）
+    * UserDefaultsEntity (NSUserDefaults封装实体)
 * RequestProtocol （网络请求层）
-* HTTPRequestManager （HTTP请求工厂） 
+    * HTTPRequestManager （HTTP请求工厂） 
 * Resource（资源文件）
-* ImageLayer （图片）
-* InterfaceBuilder（xib、Storyboard）
+    * ImageLayer （图片）
+    * InterfaceBuilder（xib、Storyboard）
 * ThirdParty（第三方库）
-* Ability（能力）
-* UI（页面）
-* Animation（效果）
+    * Ability（能力）
+    * UI（页面）
+    * Animation（效果）
 * Tools（工具）
-* ChatDisplayKitLib （聊天模块）
-* SignalRChat （接连聊天服务）
-* Vender.a（第三方.a库）
-* CameraViewController （图片与照片选择器）
-* Category （扩展库）
-* Class （扩展类）
-* Controls （扩展控件）
-* LocationManager（定位工厂）
-* TimePicker （时间选择器）
+    * ChatDisplayKitLib （聊天模块）
+    * SignalRChat （接连聊天服务）
+    * Vender.a（第三方.a库）
+    * CameraViewController （图片与照片选择器）
+    * Category （扩展库）
+        * Class （扩展类）
+        * Controls （扩展控件）
+    * LocationManager（定位工厂）
+    * TimePicker （时间选择器）
 * ViewController （试图层） 
 * ViewModelLayer （试图模型层）
 
