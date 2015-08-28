@@ -5,8 +5,8 @@
 ##主体架构目录
 
 * BaseViewController（基础父类页面）
-*  Navigation（导航栏）
-*  UI（主体UI）
+    *  Navigation（导航栏）
+    *  UI（主体UI）
 * Config（配置文件）
 * PrefixHeader（导入与服务器地址）
 * Config（Block、宏定义）
@@ -70,7 +70,6 @@ If you use this open source components in your project, please [Email us](mailto
 * [PathCover](https://github.com/JackTeam/PathCover)用于朋友圈的下拉刷新。
 * [XHImageViewer](https://github.com/JackTeam/XHImageViewer)图片查看器，用于整个项目。
 * [XHRefreshControl](https://github.com/xhzengAIB/XHRefreshControl)是一款高扩展性、低耦合度的下拉刷新、上提加载更多的组件。用于整个项目的所有下拉刷新和上提加载更多的UI和业务逻辑。    
-* 
 * 谢谢[molon](https://github.com/molon)提供多选组件[MLMultiSelectViewController](https://github.com/molon/MLMultiSelectViewController)，现在已经集成进去了。可用于群聊、添加多个朋友、等等。
 * Thanks you [lakesoft](https://github.com/lakesoft) provide [LKBadgeView](https://github.com/lakesoft/LKBadgeView).
 * Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECoreTextView](https://github.com/kishikawakatsumi/SECoreTextView).     
