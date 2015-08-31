@@ -84,7 +84,9 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
     
     //存储本地，下次启动发送到服务器
     [CCUserDefaultsCrash sharedlnstance].isCrash = YES;
-    [CCUserDefaultsCrash sharedlnstance].crashContent = errorStr;
+    NSMutableDictionary *crashDic = [CCUserDefaultsCrash sharedlnstance].crashDic;
+    [crashDic setObject:errorStr forKey:[NSDate date]];
+    [CCUserDefaultsCrash sharedlnstance].crashDic = crashDic;
     
     CFRunLoopRef runLoop = CFRunLoopGetCurrent();
     CFArrayRef allModes = CFRunLoopCopyAllModes(runLoop);

@@ -28,7 +28,7 @@
 @implementation CCUserDefaultsCrash
 
 @dynamic isCrash;
-@dynamic crashContent;
+@dynamic crashDic;
 
 /**
  *  @author CC, 2015-07-30
@@ -43,8 +43,8 @@
 {
     return @{
              @"isCrash":@NO,
-             @"crashContent":@"default",
-    };
+             @"crashDic":[NSMutableDictionary dictionary],
+             };
 }
 
 @end

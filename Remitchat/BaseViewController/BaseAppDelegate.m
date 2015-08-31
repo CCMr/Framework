@@ -65,7 +65,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];// 设置app图标消息计数为0
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -177,6 +177,24 @@
     BOOL isCrash = [CCUserDefaultsCrash sharedlnstance].isCrash;
     if (isCrash) {// 调用接口反馈错误日志
         [CCUserDefaultsCrash sharedlnstance].isCrash = !isCrash;
+
+        NSMutableDictionary *dic = [CCUserDefaultsCrash sharedlnstance].crashDic;
+//        for (NSDate *date in dic.allKeys) {
+//            NSMutableDictionary *sendDic = [NSMutableDictionary dictionary];
+//            [sendDic setObject:date forKey:@"ErrDate"];
+//            [sendDic setObject:[dic objectForKey:date] forKey:@"ErrMsg"];
+//            [sendDic setObject:[CCUserDefaultsUserinfo sharedlnstance].userName forKey:@"ErrName"];
+//            [sendDic setObject:@"4" forKey:@"ErrType"];
+//            [[CCHTTPRequest sharedlnstance] sendError:sendDic responseBlock:^(id responseData, BOOL isError) {
+//                if (!isError) {
+//                    NSLog(@"%@",responseData);
+//                }
+//            }];
+//        }
+
+        [dic removeAllObjects];
+        [CCUserDefaultsCrash sharedlnstance].crashDic = dic;
+
     }
 }
 
@@ -198,10 +216,34 @@
     [APService setupWithOption:launchOptions];
 }
 
+/**
+ *  @author CC, 15-08-31
+ *
+ *  @brief  使用系统自带推送
+ *
+ *  @param application <#application description#>
+ *
+ *  @since <#1.0#>
+ */
+-(void)initOwnService: (UIApplication *)application
+{
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    { //IOS8
+        //创建UIUserNotificationSettings，并设置消息的显示类类型
+        UIUserNotificationSettings *notSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
+        [application registerUserNotificationSettings:notSettings];
+    }
+    else
+    {//IOS7
+        [application registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound)];
+    }
+}
+
 #pragma mark - 推送
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     //注册deviceToken
     [APService registerDeviceToken:deviceToken];
+
 }
 
 /**

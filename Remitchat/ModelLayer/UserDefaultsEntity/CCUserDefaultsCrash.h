@@ -27,6 +27,6 @@
  *
  *  @since 1.0
  */
-@property (nonatomic, weak) NSString *crashContent;
+@property (nonatomic, weak) NSMutableDictionary *crashDic;
 
 @end
