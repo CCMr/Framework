@@ -208,6 +208,7 @@
 		42D6C9E61B85D5A60091135C /* SETextSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D6C94C1B85D5A60091135C /* SETextSelection.m */; };
 		42D6C9E71B85D5A60091135C /* SETextSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D6C94E1B85D5A60091135C /* SETextSelectionView.m */; };
 		42D6C9E81B85D5A60091135C /* SETextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D6C9501B85D5A60091135C /* SETextView.m */; };
+		42E4AAC71B93F3BE00183FDA /* CCAutoTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E4AAC61B93F3BE00183FDA /* CCAutoTextView.m */; };
 		42F892411B8AE47A00466843 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F892401B8AE47A00466843 /* ChatTableViewCell.xib */; };
 		BE1E24451B7DD6A000C19A80 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1E24431B7DD6A000C19A80 /* ContactViewController.xib */; };
 		BE1E24481B7DD6DC00C19A80 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1E24471B7DD6DC00C19A80 /* ContactViewController.m */; };
@@ -779,6 +780,8 @@
 		42D6C94E1B85D5A60091135C /* SETextSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETextSelectionView.m; sourceTree = "<group>"; };
 		42D6C94F1B85D5A60091135C /* SETextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETextView.h; sourceTree = "<group>"; };
 		42D6C9501B85D5A60091135C /* SETextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETextView.m; sourceTree = "<group>"; };
+		42E4AAC51B93F3BE00183FDA /* CCAutoTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAutoTextView.h; sourceTree = "<group>"; };
+		42E4AAC61B93F3BE00183FDA /* CCAutoTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAutoTextView.m; sourceTree = "<group>"; };
 		42F892401B8AE47A00466843 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChatTableViewCell.xib; path = TableViewCell/ChatTableViewCell.xib; sourceTree = "<group>"; };
 		BE1E24431B7DD6A000C19A80 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactViewController.xib; path = Contact/ContactViewController.xib; sourceTree = "<group>"; };
 		BE1E24461B7DD6DC00C19A80 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactViewController.h; path = Contact/ContactViewController.h; sourceTree = "<group>"; };
@@ -1588,6 +1591,7 @@
 		42D6C8811B85D5A50091135C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				42E4AAC41B93F3BE00183FDA /* CCUITextView */,
 				423723991B8FF0D5001672E2 /* CCActionSheet */,
 				42D6C8821B85D5A50091135C /* CCAnimatedImageView */,
 				42D6C8871B85D5A50091135C /* CCBadgeView */,
@@ -2013,6 +2017,15 @@
 				42D6C9501B85D5A60091135C /* SETextView.m */,
 			);
 			path = SECoreTextView;
+			sourceTree = "<group>";
+		};
+		42E4AAC41B93F3BE00183FDA /* CCUITextView */ = {
+			isa = PBXGroup;
+			children = (
+				42E4AAC51B93F3BE00183FDA /* CCAutoTextView.h */,
+				42E4AAC61B93F3BE00183FDA /* CCAutoTextView.m */,
+			);
+			path = CCUITextView;
 			sourceTree = "<group>";
 		};
 		BE4358AE1B7DC6D600F5B61B /* Remitchat(汇信) */ = {
@@ -3256,6 +3269,7 @@
 				BE1E24481B7DD6DC00C19A80 /* ContactViewController.m in Sources */,
 				BE1E245D1B7DD75100C19A80 /* FindViewController.m in Sources */,
 				424A12941B8AA92200D3E546 /* MessageRootEntity.m in Sources */,
+				42E4AAC71B93F3BE00183FDA /* CCAutoTextView.m in Sources */,
 				BEFCEEA61B82D10500CD99F6 /* CCEmotionCollectionViewFlowLayout.m in Sources */,
 				42D6C96F1B85D5A60091135C /* Friend.m in Sources */,
 				BEFCEEBD1B82DD7000CD99F6 /* UIScrollView+CCkeyboardControl.m in Sources */,
