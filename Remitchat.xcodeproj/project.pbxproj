@@ -48,6 +48,7 @@
 		4246C5AC1B84146A00BC8B4D /* emotion9.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4246C59B1B84146A00BC8B4D /* emotion9.gif */; };
 		424A128F1B8AA85A00D3E546 /* CCMessageRootViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 424A128E1B8AA85A00D3E546 /* CCMessageRootViewModel.m */; };
 		424A12941B8AA92200D3E546 /* MessageRootEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 424A12931B8AA92200D3E546 /* MessageRootEntity.m */; };
+		427BBDC41B959C1A0098EADA /* CCSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427BBDC31B959C1A0098EADA /* CCSignatureView.m */; };
 		428FA1731B7F0DCA00188CEB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 428FA1721B7F0DCA00188CEB /* libicucore.dylib */; };
 		42CE1D0C1B86BFB100403A67 /* libPushSDK-1.8.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CE1D0B1B86BFB100403A67 /* libPushSDK-1.8.2.a */; };
 		42CE1D101B86C47A00403A67 /* SmoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CE1D0F1B86C47A00403A67 /* SmoothViewController.m */; };
@@ -461,6 +462,8 @@
 		424A128E1B8AA85A00D3E546 /* CCMessageRootViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMessageRootViewModel.m; sourceTree = "<group>"; };
 		424A12921B8AA92200D3E546 /* MessageRootEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageRootEntity.h; path = Entity/MessageRootEntity.h; sourceTree = "<group>"; };
 		424A12931B8AA92200D3E546 /* MessageRootEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageRootEntity.m; path = Entity/MessageRootEntity.m; sourceTree = "<group>"; };
+		427BBDC21B959C1A0098EADA /* CCSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSignatureView.h; path = CCSignature/CCSignatureView.h; sourceTree = "<group>"; };
+		427BBDC31B959C1A0098EADA /* CCSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSignatureView.m; path = CCSignature/CCSignatureView.m; sourceTree = "<group>"; };
 		428FA1721B7F0DCA00188CEB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		42B9F1171B8DC8FB00D9E218 /* CCUserDefaultsCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUserDefaultsCrash.h; sourceTree = "<group>"; };
 		42CE1D0B1B86BFB100403A67 /* libPushSDK-1.8.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPushSDK-1.8.2.a"; path = "Vender.a/libPushSDK-1.8.2.a"; sourceTree = "<group>"; };
@@ -1216,6 +1219,15 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		427BBDC11B959BD30098EADA /* CCSignature */ = {
+			isa = PBXGroup;
+			children = (
+				427BBDC21B959C1A0098EADA /* CCSignatureView.h */,
+				427BBDC31B959C1A0098EADA /* CCSignatureView.m */,
+			);
+			name = CCSignature;
+			sourceTree = "<group>";
+		};
 		42CE1D0D1B86C43400403A67 /* Smooth */ = {
 			isa = PBXGroup;
 			children = (
@@ -1248,6 +1260,7 @@
 		42D6C7E31B85D5A50091135C /* Ability */ = {
 			isa = PBXGroup;
 			children = (
+				427BBDC11B959BD30098EADA /* CCSignature */,
 				42D6C7E41B85D5A50091135C /* AFNetworking */,
 				42D6C80F1B85D5A50091135C /* CCExceptionCatching */,
 				42D6C8121B85D5A50091135C /* CCLanguage */,
@@ -3175,6 +3188,7 @@
 				42D6C95E1B85D5A60091135C /* UIImageView+AFNetworking.m in Sources */,
 				42D6C98F1B85D5A60091135C /* CalendarCollectionViewCell.m in Sources */,
 				42D6C97F1B85D5A60091135C /* SRNegotiationResponse.m in Sources */,
+				427BBDC41B959C1A0098EADA /* CCSignatureView.m in Sources */,
 				4237239F1B8FF2F1001672E2 /* UIImage+Additions.m in Sources */,
 				BE7488C51B7D8614009E905C /* CCLocationManager.m in Sources */,
 				42D6C9B81B85D5A60091135C /* UIImage+GIF.m in Sources */,
