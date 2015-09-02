@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		420623551B85599200A94918 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 420623541B85599200A94918 /* BaseViewModel.m */; };
 		420623581B8561BB00A94918 /* ChatMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 420623571B8561BB00A94918 /* ChatMessageViewModel.m */; };
+		423710CC1B9690550060FC42 /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 423710CB1B9690550060FC42 /* CALayer+Transition.m */; };
+		423710CF1B969F360060FC42 /* UIImage+Operations.m in Sources */ = {isa = PBXBuildFile; fileRef = 423710CE1B969F360060FC42 /* UIImage+Operations.m */; };
 		4237239C1B8FF0F7001672E2 /* CCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4237239B1B8FF0F7001672E2 /* CCActionSheet.m */; };
 		4237239F1B8FF2F1001672E2 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4237239E1B8FF2F1001672E2 /* UIImage+Additions.m */; };
 		423723A61B8FF3C1001672E2 /* UIActionSheet+BUIActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 423723A21B8FF3C1001672E2 /* UIActionSheet+BUIActionSheet.m */; };
@@ -413,6 +415,10 @@
 		420623541B85599200A94918 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewModel.m; path = BaseViewModel/BaseViewModel.m; sourceTree = "<group>"; };
 		420623561B8561BB00A94918 /* ChatMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatMessageViewModel.h; path = ChatMessageController/ChatMessageViewModel.h; sourceTree = "<group>"; };
 		420623571B8561BB00A94918 /* ChatMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatMessageViewModel.m; path = ChatMessageController/ChatMessageViewModel.m; sourceTree = "<group>"; };
+		423710CA1B9690550060FC42 /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+Transition.h"; path = "Animation/CALayer+Transition.h"; sourceTree = "<group>"; };
+		423710CB1B9690550060FC42 /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+Transition.m"; path = "Animation/CALayer+Transition.m"; sourceTree = "<group>"; };
+		423710CD1B969F360060FC42 /* UIImage+Operations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Operations.h"; sourceTree = "<group>"; };
+		423710CE1B969F360060FC42 /* UIImage+Operations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Operations.m"; sourceTree = "<group>"; };
 		4237239A1B8FF0F7001672E2 /* CCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCActionSheet.h; path = CCActionSheet/CCActionSheet.h; sourceTree = "<group>"; };
 		4237239B1B8FF0F7001672E2 /* CCActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCActionSheet.m; path = CCActionSheet/CCActionSheet.m; sourceTree = "<group>"; };
 		4237239D1B8FF2F1001672E2 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
@@ -1114,6 +1120,15 @@
 				420623541B85599200A94918 /* BaseViewModel.m */,
 			);
 			name = BaseViewModel;
+			sourceTree = "<group>";
+		};
+		423710C91B9690160060FC42 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				423710CA1B9690550060FC42 /* CALayer+Transition.h */,
+				423710CB1B9690550060FC42 /* CALayer+Transition.m */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 		423723991B8FF0D5001672E2 /* CCActionSheet */ = {
@@ -2600,6 +2615,7 @@
 		BE74881C1B7D8614009E905C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				423710C91B9690160060FC42 /* Animation */,
 				BE74881D1B7D8614009E905C /* Class */,
 				BE7488281B7D8614009E905C /* Controls */,
 			);
@@ -2821,6 +2837,8 @@
 				423D776F1B8EE3CA00ECB35E /* UIImage+Data.m */,
 				4237239D1B8FF2F1001672E2 /* UIImage+Additions.h */,
 				4237239E1B8FF2F1001672E2 /* UIImage+Additions.m */,
+				423710CD1B969F360060FC42 /* UIImage+Operations.h */,
+				423710CE1B969F360060FC42 /* UIImage+Operations.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -3171,6 +3189,7 @@
 				423D77701B8EE3CA00ECB35E /* UIImage+Data.m in Sources */,
 				42D6C9BC1B85D5A60091135C /* UIImageView+WebCache.m in Sources */,
 				42D6C9921B85D5A60091135C /* CalendarHeaderView.m in Sources */,
+				423710CC1B9690550060FC42 /* CALayer+Transition.m in Sources */,
 				42D6C9CF1B85D5A60091135C /* CCTableViewCell.m in Sources */,
 				42D6C9701B85D5A60091135C /* FriendGroup.m in Sources */,
 				423723A61B8FF3C1001672E2 /* UIActionSheet+BUIActionSheet.m in Sources */,
@@ -3274,6 +3293,7 @@
 				42D6C9991B85D5A60091135C /* CCLoadLogoView.m in Sources */,
 				42D6C7E21B85D1EF0091135C /* CCSlideShadowAnimation.m in Sources */,
 				42D6C9BB1B85D5A60091135C /* UIImageView+MJWebCache.m in Sources */,
+				423710CF1B969F360060FC42 /* UIImage+Operations.m in Sources */,
 				42D6C9941B85D5A60091135C /* CalendarViewController.m in Sources */,
 				42D6C98E1B85D5A60091135C /* CCBadgeView.m in Sources */,
 				BE1E24601B7DD75800C19A80 /* ProfileViewController.m in Sources */,

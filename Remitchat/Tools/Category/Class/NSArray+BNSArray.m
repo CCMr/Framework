@@ -82,4 +82,98 @@
     return nil;
 }
 
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  数组转字符串
+ *
+ *  @return 返回逗号分隔字符串
+ *
+ *  @since 1.0
+ */
+- (NSString *)toString
+{
+    if (self == nil || self.count == 0)
+        return @"";
+    NSMutableString *variableStr = [NSMutableString string];
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [variableStr appendFormat:@"%@",obj];
+    }];
+
+    NSString *strForRigth = [variableStr substringWithRange:NSMakeRange(0, variableStr.length - 1)];
+    return strForRigth;
+}
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  数组对象比较
+ *
+ *  @param ary 比较数组对象
+ *
+ *  @return <#return value description#>
+ *
+ *  @since 1.0
+ */
+- (BOOL)compareIgnoreObjectOrderWithArray: (NSArray *)ary
+{
+    NSSet *selfSet = [NSSet setWithArray:self];
+    NSSet *arySet = [NSSet setWithArray:ary];
+    return [selfSet isEqualToSet:arySet];
+}
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  数组计算交集
+ *
+ *  @param otherAry <#otherAry description#>
+ *
+ *  @return <#return value description#>
+ *
+ *  @since <#1.0#>
+ */
+- (NSArray *)arrayForIntersectionWithOtherArray: (NSArray *)otherAry
+{
+    NSMutableArray *intersectionArray=[NSMutableArray array];
+    if(self.count==0) return nil;
+    if(otherAry==nil) return nil;
+
+    //遍历
+    for (id obj in self) {
+        if(![otherAry containsObject:obj]) continue;
+        //添加
+        [intersectionArray addObject:obj];
+    }
+
+    return intersectionArray;
+}
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  数据计算差集
+ *
+ *  @param otherAry <#otherAry description#>
+ *
+ *  @return <#return value description#>
+ *
+ *  @since <#1.0#>
+ */
+- (NSArray *)arrayForMinusWithOtherArray: (NSArray *)otherAry
+{
+    if(!self) return nil;
+    if(!otherAry) return self;
+
+    NSMutableArray *minusArray=[NSMutableArray arrayWithArray:self];
+    //遍历
+    for (id obj in otherAry) {
+        if(![self containsObject:obj]) continue;
+        //添加
+        [minusArray removeObject:obj];
+    }
+
+    return minusArray;
+}
+
 @end

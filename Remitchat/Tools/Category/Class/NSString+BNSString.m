@@ -28,9 +28,25 @@
 
 @implementation NSString (BNSString)
 
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  去除所有空格
+ *
+ *  @return 返回当前字符串
+ *
+ *  @since 1.0
+ */
+- (NSString *)deleteSpace
+{
+    NSMutableString *strM = [NSMutableString stringWithString:self];
+    [strM replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:NSMakeRange(0, strM.length)];
+    return strM;
+}
+
 #pragma mark - 校验
 /**
- *  @author CC, 2015-07-21 14:07:26
+ *  @author CC, 2015-07-21
  *
  *  @brief  验证手机号码
  *
@@ -89,7 +105,7 @@
 }
 
 /**
- *  @author CC, 2015-07-21 14:07:45
+ *  @author CC, 2015-07-21
  *
  *  @brief  验证邮件地址
  *
@@ -108,7 +124,26 @@
 }
 
 /**
- *  @author CC, 2015-06-03 17:06:19
+ *  @author CC, 15-09-02
+ *
+ *  @brief  验证HTTP网址
+ *
+ *  @return <#return value description#>
+ *
+ *  @since <#1.0#>
+ */
+- (BOOL)validateHttpURL
+{
+    NSString *regex =@"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
+    NSPredicate *urlMatch = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    if (![urlMatch evaluateWithObject:self])
+        return NO;
+
+    return YES;
+}
+
+/**
+ *  @author CC, 2015-06-03
  *
  *  @brief  身份证校验
  *
@@ -197,7 +232,7 @@
 
 #pragma mark - 转换
 /**
- *  @author CC, 2015-07-21 18:07:50
+ *  @author CC, 2015-07-21
  *
  *  @brief  字符串转换日期
  *
@@ -215,7 +250,7 @@
 }
 
 /**
- *  @author CC, 2015-07-22 15:07:38
+ *  @author CC, 2015-07-22
  *
  *  @brief  转换货币格式
  *
@@ -245,6 +280,20 @@
     return [UIImage imageWithData:datas];
 }
 
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  转换Data
+ *
+ *  @return <#return value description#>
+ *
+ *  @since <#1.0#>
+ */
+- (NSData *)convertingData
+{
+    return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
 #pragma mark - 取值
 /**
  *  @author CC, 15-08-14
@@ -266,14 +315,14 @@
  *
  *  @brief  MD5Hash加密
  *
- *  @return <#return value description#>
+ *  @return 返回加密字符串
  *
- *  @since <#1.0#>
+ *  @since 1.0
  */
-- (NSString *)MD5Hash {
-    if(self.length == 0) {
+- (NSString *)MD5Hash
+{
+    if(self.length == 0)
         return nil;
-    }
 
     const char *cStr = [self UTF8String];
     unsigned char result[16];
@@ -282,6 +331,57 @@
     return [NSString stringWithFormat:@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
             result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],
             result[8], result[9], result[10], result[11],result[12], result[13], result[14], result[15]];
+}
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  MD5 32位加密
+ *
+ *  @return 返回加密字符串
+ *
+ *  @since 1.0
+ */
+- (NSString *)MD532
+{
+    const char *cStr = [self UTF8String];
+    unsigned char digest[CC_MD5_DIGEST_LENGTH];
+
+    CC_MD5(cStr, (CC_LONG)strlen(cStr), digest);
+
+    NSMutableString *result = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
+        [result appendFormat:@"%02x", digest[i]];
+    }
+
+    return [result copy];
+}
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  SHA加密
+ *
+ *  @return 返回加密字符串
+ *
+ *  @since 1.0
+ */
+- (NSString *)SHA
+{
+    const char *cStr = [self UTF8String];
+    NSData *data = [NSData dataWithBytes:cStr length:self.length];
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+
+    CC_SHA1(data.bytes, (CC_LONG)data.length, digest);
+
+    NSMutableString *result = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+
+    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) {
+        [result appendFormat:@"%02x", digest[i]];
+    }
+
+    return [result copy];
 }
 
 #pragma mark - 文件

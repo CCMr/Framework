@@ -27,9 +27,20 @@
 
 @interface NSString (BNSString)
 
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  去除所有空格
+ *
+ *  @return 返回当前字符串
+ *
+ *  @since 1.0
+ */
+- (NSString *)deleteSpace;
+
 #pragma mark - 校验
 /**
- *  @author C C, 2015-07-21 14:07:26
+ *  @author C C, 2015-07-21
  *
  *  @brief  验证手机号码
  *
@@ -39,7 +50,7 @@
  */
 - (BOOL)validateMobileNumber;
 /**
- *  @author C C, 2015-07-21 14:07:45
+ *  @author C C, 2015-07-21
  *
  *  @brief  验证邮件地址
  *
@@ -49,9 +60,20 @@
  */
 - (BOOL)validateEmailAddress;
 
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  验证HTTP网址
+ *
+ *  @return <#return value description#>
+ *
+ *  @since <#1.0#>
+ */
+- (BOOL)validateHttpURL;
+
 #pragma mark - 转换
 /**
- *  @author C C, 2015-07-21 18:07:50
+ *  @author C C, 2015-07-21
  *
  *  @brief  字符串转换日期
  *
@@ -64,7 +86,7 @@
 - (NSDate *)convertingStringsToDate:(NSString *)strFormat;
 
 /**
- *  @author C C, 2015-07-22 15:07:38
+ *  @author C C, 2015-07-22 
  *
  *  @brief  转换货币格式
  *
@@ -84,6 +106,17 @@
  *  @since <#1.0#>
  */
 - (UIImage *)decodedImage;
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  转换Data
+ *
+ *  @return <#return value description#>
+ *
+ *  @since <#1.0#>
+ */
+- (NSData *)convertingData;
 
 #pragma mark - 取值
 /**
@@ -108,6 +141,28 @@
  *  @since <#1.0#>
  */
 - (NSString *)MD5Hash;
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  MD5 32位加密
+ *
+ *  @return 返回加密字符串
+ *
+ *  @since 1.0
+ */
+- (NSString *)MD532;
+
+/**
+ *  @author CC, 15-09-02
+ *
+ *  @brief  SHA加密
+ *
+ *  @return 返回加密字符串
+ *
+ *  @since 1.0
+ */
+- (NSString *)SHA;
 
 #pragma mark - 文件
 /**
