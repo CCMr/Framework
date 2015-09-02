@@ -10,6 +10,7 @@
 * Config（配置文件）
     * PrefixHeader（导入与服务器地址）
     * Config（Block、宏定义）
+    * EnumConfig (宏枚举)
 * DatabaseLayer（数据库层）
     *  CoreDataManager（封装苹果数据库）
 * ModelLayer（实体层 ）
